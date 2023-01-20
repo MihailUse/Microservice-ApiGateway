@@ -1,10 +1,10 @@
-using ApiGateway.Configs;
+using ApiGatewayMicroservice.Configs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
-namespace ApiGateway;
+namespace ApiGatewayMicroservice;
 
 public class Program
 {
@@ -46,11 +46,8 @@ public class Program
         var app = builder.Build();
 
         // swagger
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerForOcelotUI(options => options.PathToSwaggerGenerator = "/swagger/docs");
-        }
+        app.UseSwagger();
+        app.UseSwaggerForOcelotUI(options => options.PathToSwaggerGenerator = "/swagger/docs");
 
         //app.UseHttpsRedirection();
         app.UseOcelot().Wait();

@@ -1,7 +1,7 @@
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace ApiGateway.Configs;
+namespace ApiGatewayMicroservice.Configs;
 
 public class AuthConfig
 {
