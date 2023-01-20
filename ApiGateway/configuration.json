@@ -1,0 +1,101 @@
+{
+  "Routes": [
+    {
+      "SwaggerKey": "auth",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authmicroservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/{everything}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ]
+    },
+    {
+      "SwaggerKey": "equipment",
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "equipmentmicroservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/equipment/api/{everything}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "SwaggerKey": "equipment",
+      "DownstreamPathTemplate": "/test/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "equipmentmicroservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/equipment/test/{everything}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ]
+    },
+    {
+      "SwaggerKey": "equipment",
+      "DownstreamPathTemplate": "/swagger/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "equipmentmicroservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/equipment/swagger/{everything}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ]
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "auth",
+      "Config": [
+        {
+          "Name": "Auth API",
+          "Version": "v1",
+          "Url": "http://localhost/auth/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "equipment",
+      "Config": [
+        {
+          "Name": "Equipment API",
+          "Version": "v1",
+          "Url": "http://localhost/equipment/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}
