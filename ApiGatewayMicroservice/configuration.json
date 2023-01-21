@@ -10,7 +10,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/auth/{everything}",
+      "UpstreamPathTemplate": "/Auth/{everything}",
       "UpstreamHttpMethod": [
         "POST",
         "GET"
@@ -18,7 +18,7 @@
     },
     {
       "SwaggerKey": "equipment",
-      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamPathTemplate": "/Api/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -26,7 +26,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/equipment/api/{everything}",
+      "UpstreamPathTemplate": "/Equipment/Api/{everything}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",
@@ -40,7 +40,7 @@
     },
     {
       "SwaggerKey": "equipment",
-      "DownstreamPathTemplate": "/test/{everything}",
+      "DownstreamPathTemplate": "/Test/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -48,7 +48,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/equipment/test/{everything}",
+      "UpstreamPathTemplate": "/Equipment/Test/{everything}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",
@@ -66,7 +66,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/equipment/swagger/{everything}",
+      "UpstreamPathTemplate": "/Equipment/Swagger/{everything}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",
