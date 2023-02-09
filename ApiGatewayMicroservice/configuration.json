@@ -40,7 +40,7 @@
     },
     {
       "SwaggerKey": "equipment",
-      "DownstreamPathTemplate": "/Test/{everything}",
+      "DownstreamPathTemplate": "/test/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
