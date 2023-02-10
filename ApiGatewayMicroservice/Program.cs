@@ -45,6 +45,8 @@ public class Program
 
         var app = builder.Build();
 
+        app.UseCors(options => options.AllowAnyOrigin());
+
         // swagger
         app.UseSwagger();
         app.UseSwaggerForOcelotUI(options => options.PathToSwaggerGenerator = "/swagger/docs");
