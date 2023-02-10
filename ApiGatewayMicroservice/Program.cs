@@ -45,7 +45,12 @@ public class Program
 
         var app = builder.Build();
 
-        app.UseCors(options => options.AllowAnyOrigin());
+        app.UseCors(options =>
+        {
+            options.AllowAnyOrigin();
+            options.AllowAnyMethod();
+            options.AllowAnyHeader();
+        });
 
         // swagger
         app.UseSwagger();
